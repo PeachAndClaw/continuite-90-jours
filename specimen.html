@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Spécimen complet et auditable d’une Carte de continuité 90 jours : hypothèses, calculs, dépendances et décisions d’un cas fictif." />
+    <meta name="author" content="Peach &amp; Claw" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#0d1015" />
+    <link rel="canonical" href="https://peachandclaw.github.io/continuite-90-jours/specimen.html" />
+    <link rel="alternate" hreflang="fr-FR" href="https://peachandclaw.github.io/continuite-90-jours/specimen.html" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/unbounded-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/tokens.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Spécimen complet — Carte de continuité 90 jours</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Aller au contenu</a>
+    <header class="masthead">
+      <div class="shell masthead__inner">
+        <a class="brand" href="./" aria-label="Retour à la Carte de continuité 90 jours">
+          <img src="assets/wordmark.svg" alt="Peach and Claw" width="1600" height="360" fetchpriority="high" />
+        </a>
+        <nav aria-label="Navigation principale">
+          <a href="./">L’offre</a>
+          <a href="#calculs">Calculs</a>
+          <a href="#registre">Registre</a>
+          <a href="#decisions">Décisions</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="report">
+      <section class="report__hero">
+        <div class="shell report__hero-grid">
+          <div>
+            <p class="kicker">Spécimen complet · cas fictif</p>
+            <h1>Une décision <em>auditable, ligne par ligne.</em></h1>
+            <p class="report__lead">
+              Ce dossier n’est ni un résultat client ni une promesse de gain. Il expose
+              la méthode, les hypothèses et les calculs d’un cas inventé pour que chacun
+              puisse les vérifier — ou les contester.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="assets/specimen-registre.csv" download>Télécharger le registre CSV</a>
+              <a class="button button--quiet" href="./">Revenir à l’offre</a>
+            </div>
+          </div>
+          <aside class="report__stamp" aria-label="Nature du spécimen">
+            <strong>NON CLIENT</strong>
+            <span>Montants illustratifs</span>
+            <span>Hypothèses explicites</span>
+            <span>Aucun résultat attribué</span>
+          </aside>
+        </div>
+      </section>
+
+      <section class="report__section" aria-labelledby="case-title">
+        <div class="shell report__split">
+          <div>
+            <p class="kicker">01 · Le cas</p>
+            <h2 id="case-title">Un solo B2B perd sa mission principale.</h2>
+          </div>
+          <div class="report__prose">
+            <p>Le professionnel dispose de <strong>4 200 €</strong> de trésorerie déclarée. Ses encaissements habituels sont de 4 800 € par mois, dont 50 % proviennent de la mission qui vient de s’arrêter. Ses engagements opérationnels représentent <strong>2 410 € par mois</strong>.</p>
+            <p>Pour isoler le risque, le calcul de continuité suppose d’abord <strong>zéro nouvel encaissement</strong>. Il utilise des mois conventionnels de 30 jours et ne prétend pas remplacer un prévisionnel comptable.</p>
+          </div>
+        </div>
+        <div class="shell report__facts" role="list" aria-label="Hypothèses principales">
+          <div role="listitem"><span>Trésorerie déclarée</span><strong>4 200 €</strong></div>
+          <div role="listitem"><span>Coûts actuels</span><strong>2 410 €/mois</strong></div>
+          <div role="listitem"><span>Horizon analysé</span><strong>90 jours</strong></div>
+          <div role="listitem"><span>Action immédiate</span><strong>30 jours</strong></div>
+        </div>
+      </section>
+
+      <section class="report__section report__section--paper" id="calculs" aria-labelledby="math-title">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <p class="kicker">02 · Les calculs</p>
+              <h2 id="math-title">52 → 91 jours n’est pas une promesse.</h2>
+            </div>
+            <p>C’est une fourchette conditionnelle. La borne haute n’existe que si les différés sont obtenus et maintenus.</p>
+          </div>
+          <div class="math-grid">
+            <div>
+              <span>Sans action</span>
+              <strong>52,3 jours</strong>
+              <code>4 200 ÷ 2 410 × 30</code>
+              <p>Tous les coûts continuent, sans nouvel encaissement.</p>
+            </div>
+            <div>
+              <span>Gel + arrêts confirmés</span>
+              <strong>63 jours</strong>
+              <code>4 200 ÷ 2 000 × 30</code>
+              <p>410 € sont suspendus ou arrêtés ; le support reste payé.</p>
+            </div>
+            <div>
+              <span>Support différé 30 jours</span>
+              <strong>72,3 jours</strong>
+              <code>30 + (4 200 − 1 380) ÷ 2 000 × 30</code>
+              <p>Le support de 620 € revient après J+30.</p>
+            </div>
+            <div class="math-grid__high">
+              <span>Borne haute</span>
+              <strong>91,3 jours</strong>
+              <code>4 200 ÷ 1 380 × 30</code>
+              <p>Les 1 030 € non vitaux restent suspendus ou différés pendant toute la période.</p>
+            </div>
+          </div>
+          <p class="report__warning"><strong>Le chiffre à piloter n’est donc pas « 91 jours ».</strong> C’est la condition qui permet — ou interdit — de le conserver. Si un fournisseur refuse le différé, le scénario est recalculé.</p>
+        </div>
+      </section>
+
+      <section class="report__section" aria-labelledby="method-title">
+        <div class="shell report__split">
+          <div>
+            <p class="kicker">03 · La méthode</p>
+            <h2 id="method-title">Six critères avant chaque décision.</h2>
+          </div>
+          <ol class="method-list">
+            <li><span>01</span><strong>Obligation</strong><p>Contrat, assurance, règle légale ou engagement client.</p></li>
+            <li><span>02</span><strong>Échéance</strong><p>Date de renouvellement, préavis et dernière date d’action.</p></li>
+            <li><span>03</span><strong>Dépendance</strong><p>Fonction directe et effets de deuxième ordre.</p></li>
+            <li><span>04</span><strong>Réversibilité</strong><p>Temps, données et effort nécessaires pour revenir.</p></li>
+            <li><span>05</span><strong>Coût de reprise</strong><p>Frais, migration, indisponibilité et risque de perte.</p></li>
+            <li><span>06</span><strong>Condition de reprise</strong><p>Événement observable qui justifie la remise en service.</p></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="report__section report__section--panel" id="registre" aria-labelledby="ledger-title">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <p class="kicker">04 · Le registre</p>
+              <h2 id="ledger-title">19 lignes. Pas quatre couleurs décoratives.</h2>
+            </div>
+            <p>Le vrai livrable contient jusqu’à 25 lignes dans un fichier XLSX modifiable. Ce CSV public en montre la structure complète.</p>
+          </div>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Extrait du registre fictif, défilement horizontal possible">
+            <table>
+              <thead><tr><th>Classe</th><th>Poste</th><th>€/mois</th><th>Dépendance décisive</th><th>Décision à J0</th></tr></thead>
+              <tbody>
+                <tr><td>Vital</td><td>Domaine et email</td><td>55</td><td>Vente, accès clients et récupération des comptes</td><td>Protéger</td></tr>
+                <tr><td>Vital</td><td>Sauvegarde et sécurité</td><td>70</td><td>Fichiers clients et capacité de reprise</td><td>Protéger</td></tr>
+                <tr><td>Support</td><td>CRM commercial</td><td>90</td><td>Historique des prospects et relances</td><td>Exporter puis différer</td></tr>
+                <tr><td>Support</td><td>Réservation sous-traitant</td><td>300</td><td>Capacité supplémentaire de livraison</td><td>Négocier par écrit</td></tr>
+                <tr><td>Gelable</td><td>Calcul média</td><td>140</td><td>Livrables média non contractés</td><td>Suspendre</td></tr>
+                <tr><td>Supprimable</td><td>Outils IA expérimentaux</td><td>90</td><td>Aucune livraison active</td><td>Arrêter</td></tr>
+              </tbody>
+              <tfoot><tr><th colspan="2">Total des 19 lignes</th><th>2 410</th><th colspan="2"><a href="assets/specimen-registre.csv" download>Télécharger toutes les lignes</a></th></tr></tfoot>
+            </table>
+          </div>
+
+          <article class="second-order">
+            <p class="kicker">Ce qu’une addition ne montre pas</p>
+            <h3>Couper 55 € peut verrouiller le reste.</h3>
+            <div class="second-order__chain" role="group" aria-label="Dépendance de second ordre">
+              <span>Domaine + email</span><b>→</b><span>Réinitialisation des comptes</span><b>→</b><span>Administration de l’hébergement</span><b>→</b><span>Livraison client</span>
+            </div>
+            <p>Le domaine et l’email paraissent petits. Pourtant ils servent à récupérer les accès aux outils qui hébergent le site, les automatisations et le portail client. Leur suppression peut rendre la remise en route plus chère que l’économie. Ils restent donc vitaux.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="report__section report__section--paper" id="decisions" aria-labelledby="decision-title">
+        <div class="shell report__split">
+          <div>
+            <p class="kicker">05 · Le plan à 30 jours</p>
+            <h2 id="decision-title">L’horizon est 90 jours. L’action commence maintenant.</h2>
+          </div>
+          <div class="timeline">
+            <div><span>J0–J2</span><strong>Protéger</strong><p>Bloquer les neuf lignes vitales. Exporter le CRM et les licences avant toute suspension.</p></div>
+            <div><span>J2–J7</span><strong>Obtenir</strong><p>Demander par écrit les quatre différés de support. Un refus fait tomber la borne de 91 jours.</p></div>
+            <div><span>J7–J21</span><strong>Observer</strong><p>Comparer encaissements réels, nouvelles commandes et trésorerie au scénario choisi.</p></div>
+            <div><span>J30</span><strong>Recalculer</strong><p>Mettre à jour les hypothèses et décider des 60 jours restants. C’est la mise à jour incluse.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="report__section" aria-labelledby="output-title">
+        <div class="shell report__split">
+          <div>
+            <p class="kicker">06 · Ce qui est remis</p>
+            <h2 id="output-title">Un dossier lisible. Un registre modifiable.</h2>
+          </div>
+          <div class="output-list">
+            <div><strong>Dossier PDF</strong><p>Hypothèses, trois scénarios, calculs, carte des dépendances et plan daté.</p></div>
+            <div><strong>Registre XLSX</strong><p>Jusqu’à 25 lignes modifiables : montants, préavis, réversibilité, décisions et conditions de reprise.</p></div>
+            <div><strong>Restitution</strong><p>30 minutes pour contester les hypothèses, corriger les dépendances et arrêter la version utile.</p></div>
+            <div><strong>Mise à jour J+30</strong><p>Une révision des hypothèses et du plan pour les 60 jours restants — pas un abonnement caché.</p></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="shell footer__grid">
+        <img src="assets/emblem.svg" alt="" width="72" height="72" />
+        <div><strong>Peach &amp; Claw</strong><p>Spécimen fictif · dernière mise à jour le 24 septembre 2026.</p></div>
+        <p><a href="./">Carte de continuité 90 jours</a><br /><a href="transparence.html">Transparence, hébergement et données</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

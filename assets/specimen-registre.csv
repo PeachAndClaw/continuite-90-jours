@@ -1,0 +1,20 @@
+Categorie;Poste;Montant_mensuel_EUR;Preavis;Reversible;Cout_de_remise_en_route;Dependances;Decision_J0;Condition_de_reprise
+Vital;Espace de travail;420;30 jours;Faible;Depot et demenagement;Adresse professionnelle et capacite de production;Proteger;Revoir seulement si la baisse dure au-dela de J30
+Vital;Suite de production;310;Mensuel;Moyenne;Reconfiguration 1 jour;Livrables clients et fichiers sources;Proteger;Sans objet
+Vital;Hebergement principal;185;Mensuel;Faible;Restauration et DNS 1 jour;Site automatisations et acces client;Proteger;Sans objet
+Vital;Assurance professionnelle;95;Annuel;Faible;Nouvelle souscription et carence possible;Contrats clients et couverture de responsabilite;Proteger;Sans objet
+Vital;Internet et mobile;85;30 jours;Moyenne;Activation 2 a 5 jours;Vente production support et authentification;Proteger;Sans objet
+Vital;Sauvegarde et securite;70;Mensuel;Faible;Restauration incertaine;Fichiers clients et capacite de reprise;Proteger;Sans objet
+Vital;Comptabilite minimale;110;Contrat annuel;Moyenne;Reprise de dossier;Declarations factures et continuite administrative;Proteger;Revoir le niveau de service avec le prestataire
+Vital;Domaine et email;55;Annuel;Faible;Risque de perte de domaine;Vente acces clients et recuperation des comptes;Proteger;Sans objet
+Vital;API critique;50;Aucun;Forte;Reactivation immediate;Automatisation livrant les clients;Proteger;Sans objet
+Support;CRM commercial;90;Mensuel;Forte;Reimport CSV 2 heures;Historique des prospects et relances;Differer apres export;Une nouvelle campagne ou plus de 10 prospects actifs
+Support;Annuaire professionnel;80;Mensuel;Forte;Reactivation immediate;Acquisition non essentielle a 30 jours;Differer;Reprise de prospection structuree
+Support;Reservation sous-traitant;300;30 jours;Moyenne;Disponibilite non garantie;Capacite supplementaire de livraison;Negocier par ecrit;Commande signee exigeant cette capacite
+Support;Formation et groupe de pairs;150;Mensuel;Forte;Aucun;Progression a moyen terme;Differer;Retour a une tresorerie superieure a 90 jours
+Gelable;Credits de calcul media;140;Aucun;Forte;Reactivation immediate;Livrables media non contractes;Suspendre;Commande payee necessitant ce calcul
+Gelable;Bibliotheque graphique;60;Mensuel;Forte;Reactivation immediate;Production creative non critique;Suspendre apres archivage des licences;Nouveau projet creatif signe
+Gelable;Transcription;50;Mensuel;Forte;Reactivation immediate;Confort de production;Suspendre;Volume superieur a 5 heures par mois
+Supprimable;Outils IA experimentaux;90;Mensuel;Forte;Reabonnement;Aucune livraison active;Arreter;Seulement apres usage client prouve
+Supprimable;Stockage duplique;40;Mensuel;Moyenne;Recopie des archives;Aucune fonction unique apres verification;Arreter apres controle;Nouveau besoin de redondance documente
+Supprimable;Planification dupliquee;30;Mensuel;Forte;Reabonnement;Fonction deja couverte ailleurs;Arreter;Aucune

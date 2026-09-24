@@ -1,4 +1,5 @@
 from pathlib import Path
+import csv
 import json
 from urllib.parse import parse_qs, urlparse
 
@@ -48,7 +49,7 @@ def main() -> None:
         assert response is not None and response.ok, "The local page did not load"
         assert desktop.title() == "Carte de continuité 90 jours — Peach & Claw"
         heading = " ".join(desktop.locator("h1").inner_text().split())
-        assert heading == "Un client disparaît. Qu’est-ce qui survit ?"
+        assert heading == "Un revenu baisse. Qu’est-ce qui tient ?"
         assert desktop.locator("text=EXEMPLE / NON CLIENT").count() == 1
         assert desktop.locator("text=250 € HT").count() >= 2
         assert desktop.locator("text=72 heures").count() >= 2
@@ -61,7 +62,10 @@ def main() -> None:
         assert "résultat garanti" not in page_text.lower()
         assert "ROI" not in page_text
         assert desktop.locator(".hero__facts[role='list'] [role='listitem']").count() == 4
-        assert desktop.locator("#questions details").count() == 4
+        assert desktop.locator("#questions details").count() == 8
+        assert "Coupable" not in page_text
+        assert "ordre sûr" not in page_text.lower()
+        assert desktop.get_by_role("link", name="Auditer le spécimen").is_visible()
 
         assert desktop.locator("meta[name='description']").get_attribute("content")
         assert desktop.locator("meta[name='robots']").get_attribute("content") == "index,follow,max-image-preview:large"
@@ -77,7 +81,7 @@ def main() -> None:
         assert service["offers"]["price"] == "250"
         assert service["offers"]["priceCurrency"] == "EUR"
         faq = next(item for item in graph if item["@type"] == "FAQPage")
-        assert len(faq["mainEntity"]) == 4
+        assert len(faq["mainEntity"]) == 8
 
         links = desktop.locator("a").evaluate_all(
             "elements => elements.map(element => element.href)"
@@ -109,6 +113,8 @@ def main() -> None:
             "sitemap.xml",
             "llms.txt",
             "transparence.html",
+            "specimen.html",
+            "assets/specimen-registre.csv",
         ):
             asset_response = desktop.request.get(BASE_URL + relative_path)
             assert asset_response.ok, f"Missing asset: {relative_path}"
@@ -135,6 +141,34 @@ def main() -> None:
         assert transparency.locator("link[href*='fonts.googleapis.com'], link[href*='fonts.gstatic.com']").count() == 0
         assert_no_horizontal_overflow(transparency, "transparency")
 
+        specimen = browser.new_page(viewport={"width": 1440, "height": 1000})
+        specimen_response = specimen.goto(BASE_URL + "specimen.html", wait_until="networkidle")
+        assert specimen_response is not None and specimen_response.ok
+        assert specimen.get_by_role("heading", name="Une décision auditable, ligne par ligne").is_visible()
+        assert specimen.locator("text=52,3 jours").count() == 1
+        assert specimen.locator("text=91,3 jours").count() == 1
+        assert specimen.locator("text=NON CLIENT").count() == 1
+        assert specimen.locator("table tbody tr").count() == 6
+        assert specimen.get_by_role("link", name="Télécharger toutes les lignes").is_visible()
+        assert_no_horizontal_overflow(specimen, "specimen")
+        specimen.screenshot(path=RESULTS / "specimen.png", full_page=True)
+
+        specimen_mobile = browser.new_page(viewport={"width": 390, "height": 844})
+        specimen_mobile.goto(BASE_URL + "specimen.html", wait_until="networkidle")
+        assert specimen_mobile.locator("h1").is_visible()
+        assert_no_horizontal_overflow(specimen_mobile, "specimen mobile")
+        specimen_mobile.screenshot(path=RESULTS / "specimen-mobile.png", full_page=True)
+
+        with (ROOT / "assets" / "specimen-registre.csv").open(encoding="utf-8", newline="") as handle:
+            rows = list(csv.DictReader(handle, delimiter=";"))
+        assert len(rows) == 19
+        totals: dict[str, int] = {}
+        for row in rows:
+            category = row["Categorie"]
+            totals[category] = totals.get(category, 0) + int(row["Montant_mensuel_EUR"])
+        assert totals == {"Vital": 1380, "Support": 620, "Gelable": 250, "Supprimable": 160}
+        assert sum(totals.values()) == 2410
+
         og = browser.new_page(viewport={"width": 1200, "height": 630})
         og.goto(BASE_URL + "assets/og-card.svg", wait_until="networkidle")
         og.screenshot(path=ROOT / "assets" / "og-card.png")
@@ -143,7 +177,7 @@ def main() -> None:
         assert not page_errors, f"Page errors: {page_errors}"
         browser.close()
 
-    print("PASS desktop=1440x1000 mobile=390x844 assets=ok mailto=ok no-overflow")
+    print("PASS desktop/mobile specimen=auditable totals=2410 assets=ok mailto=ok no-overflow")
 
 
 if __name__ == "__main__":

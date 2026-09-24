@@ -11,8 +11,20 @@
 - Prix : 250 EUR HT, payé à la commande.
 - Délai : 72 heures après validation du périmètre, paiement et réception des éléments.
 - Périmètre : 25 coûts ou obligations maximum.
-- Livrables : classification Vital / Support / Gelable / Coupable, carte des dépendances, trois scénarios de revenus et plan d’action à trente jours.
+- Livrables : dossier PDF, registre XLSX modifiable, classification Vital / Support / Gelable / Supprimable, carte des dépendances, trois scénarios de revenus et plan d’action argumenté à trente jours.
 - Charge client : entretien de 45 minutes et restitution de 30 minutes.
+
+## Chronologie
+
+- 90 jours : horizon analysé.
+- 30 jours : plan d’action immédiat.
+- J+30 : mise à jour incluse pour revalider les hypothèses et ajuster les 60 jours restants.
+
+## Spécimen auditable
+
+- https://peachandclaw.github.io/continuite-90-jours/specimen.html
+- Registre CSV : https://peachandclaw.github.io/continuite-90-jours/assets/specimen-registre.csv
+- Le cas est fictif. Le passage de 52 à 91 jours est une borne conditionnelle, pas un résultat client ni une promesse.
 
 ## Limites
 
@@ -20,6 +32,7 @@
 - Aucune résiliation automatique.
 - Ce service ne fournit pas de comptabilité, conseil juridique, fiscal, financier, en investissement ou en financement.
 - Le cas public est fictif et illustratif ; il ne constitue pas un résultat client.
+- Les documents de mission ne sont pas utilisés pour entraîner un modèle public et sont supprimés au plus tard 30 jours après la mise à jour J+30, sauf obligation légale ou accord différent.
 
 ## Fournisseur
 

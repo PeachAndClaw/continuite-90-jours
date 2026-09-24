@@ -8,6 +8,7 @@ Page commerciale dédiée au test payant de la Carte de continuité 90 jours : u
 - aucune connexion bancaire ni collecte de secrets ;
 - devis et paiement à la commande avant démarrage ;
 - le spécimen public est fictif et explicitement présenté comme tel ;
+- le spécimen complet publie ses hypothèses, calculs et un registre CSV téléchargeable ;
 - une demande de suivi récurrent doit venir des acheteurs avant toute hypothèse d’abonnement.
 
 ## Développement local
@@ -26,6 +27,7 @@ La surface publique comprend :
 - données structurées Schema.org (`Organization`, `WebSite`, `WebPage`, `Service`, `Offer`, `FAQPage`) ;
 - `robots.txt`, `sitemap.xml` et `llms.txt` ;
 - page de transparence, polices auto-hébergées, aucun traceur ni formulaire ;
+- spécimen complet auditable et politique explicite de conservation des données ;
 - tests navigateur bureau/mobile et contrôle des liens, actifs, débordements, métadonnées et garde-fous commerciaux.
 
 ```bash
