@@ -1,3 +1,35 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("assets/fonts/manrope-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("assets/fonts/unbounded-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("assets/fonts/ibm-plex-mono-500-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("assets/fonts/ibm-plex-mono-600-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
 :root {
   --lm-bg: #0d1015;
   --lm-panel: #151a21;
@@ -82,7 +114,7 @@ a { color: inherit; -webkit-tap-highlight-color: transparent; }
 }
 
 .brand { width: 180px; max-width: 46vw; }
-.brand img { display: block; width: 100%; }
+.brand img { display: block; width: 100%; height: auto; }
 
 nav { display: flex; align-items: center; gap: clamp(1rem, 3vw, 2.2rem); }
 nav a {
@@ -315,6 +347,36 @@ h2 { max-width: 18ch; margin-top: .35em; font-size: clamp(2.1rem, 4.5vw, 4.3rem)
 .fit__card--yes > span { color: var(--lm-burgundy); }
 .fit__card--no > span { color: #60656d; }
 
+.faq { border-bottom: 1px solid var(--lm-border-pale); background: var(--lm-panel); }
+.faq__grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: clamp(3rem, 8vw, 7rem); align-items: start; }
+.faq__intro > p:not(.kicker) { max-width: 48ch; color: var(--lm-muted); }
+.faq__items { border-top: 1px solid var(--lm-border-pale); }
+.faq details { border-bottom: 1px solid var(--lm-border-pale); }
+.faq summary {
+  position: relative;
+  padding: 1.35rem 3rem 1.35rem 0;
+  cursor: pointer;
+  font: 600 clamp(1rem, 1rem + .25vw, 1.2rem) / 1.4 var(--lm-display);
+  list-style: none;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: .35rem; top: 1.15rem; color: var(--lm-peach); font: 500 1.5rem / 1 var(--lm-mono); }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { max-width: 62ch; margin: -.25rem 3rem 1.35rem 0; color: var(--lm-muted); }
+
+.transparency { min-height: calc(100vh - 72px); padding: clamp(4rem, 8vw, 7rem) 0; }
+.transparency__head { max-width: 52rem; }
+.transparency__head h1 { max-width: 13ch; }
+.transparency__lead { max-width: 64ch; color: var(--lm-muted); font-size: clamp(1.05rem, 1rem + .3vw, 1.25rem); }
+.transparency__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin-top: 3.5rem; padding: 1px; background: var(--lm-border-pale); }
+.transparency__card { padding: clamp(1.5rem, 3vw, 2.2rem); background: var(--lm-panel); }
+.transparency__card h2 { max-width: none; margin: 0; font-size: clamp(1.25rem, 2vw, 1.7rem); letter-spacing: -.035em; }
+.transparency__card p, .transparency__card li { color: var(--lm-muted); }
+.transparency__card strong { color: var(--lm-text); }
+.transparency__card a { text-underline-offset: .18em; }
+.transparency__card ul { display: grid; gap: .65rem; padding-left: 1.2rem; }
+.transparency__warning { border-left: 5px solid var(--lm-peach); }
+
 .mission { position: relative; overflow: hidden; background: var(--lm-burgundy); }
 .mission::after { content: "90"; position: absolute; right: -2vw; bottom: -11vw; color: rgb(255 255 255 / 5%); font: 700 min(37vw, 32rem) / 1 var(--lm-display); letter-spacing: -.1em; pointer-events: none; }
 .mission__grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr .85fr; gap: clamp(3rem, 8vw, 7rem); align-items: start; }
@@ -345,7 +407,7 @@ footer { padding: 2.2rem 0; background: #080a0e; }
 .footer__grid a { text-underline-offset: .18em; }
 
 @media (max-width: 960px) {
-  .hero__grid, .thesis__grid, .specimen__grid, .mission__grid { grid-template-columns: 1fr; }
+  .hero__grid, .thesis__grid, .specimen__grid, .mission__grid, .faq__grid { grid-template-columns: 1fr; }
   .hero { min-height: auto; }
   .hero__copy { max-width: 46rem; }
   .continuity-board { max-width: 44rem; }
@@ -376,6 +438,7 @@ footer { padding: 2.2rem 0; background: #080a0e; }
   .contact-strip { grid-template-columns: 1fr; gap: 1rem; }
   .footer__grid { grid-template-columns: auto 1fr; }
   .footer__grid > p { grid-column: 1 / -1; text-align: left; }
+  .transparency__grid { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {

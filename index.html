@@ -7,6 +7,7 @@
       name="description"
       content="Carte de continuité 90 jours pour consultants et petites agences : noyau vital, dépendances, trois scénarios et plan de coupure — 250 € HT."
     />
+    <meta name="author" content="Peach &amp; Claw" />
     <meta name="theme-color" content="#0d1015" />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <meta property="og:title" content="Carte de continuité 90 jours — Peach &amp; Claw" />
@@ -19,6 +20,7 @@
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:url" content="https://peachandclaw.github.io/continuite-90-jours/" />
     <meta property="og:image" content="https://peachandclaw.github.io/continuite-90-jours/assets/og-card.png" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Carte de continuité 90 jours par Peach &amp; Claw — 250 € HT" />
@@ -27,46 +29,124 @@
     <meta name="twitter:description" content="Votre noyau vital, les coupures sûres et un plan à trente jours — 250 € HT." />
     <meta name="twitter:image" content="https://peachandclaw.github.io/continuite-90-jours/assets/og-card.png" />
     <link rel="canonical" href="https://peachandclaw.github.io/continuite-90-jours/" />
+    <link rel="alternate" hreflang="fr-FR" href="https://peachandclaw.github.io/continuite-90-jours/" />
+    <link rel="alternate" hreflang="x-default" href="https://peachandclaw.github.io/continuite-90-jours/" />
     <link rel="sitemap" type="application/xml" href="sitemap.xml" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/unbounded-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/tokens.css" />
     <link rel="stylesheet" href="styles.css" />
     <title>Carte de continuité 90 jours — Peach &amp; Claw</title>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Service",
-        "@id": "https://peachandclaw.github.io/continuite-90-jours/#service",
-        "name": "Carte de continuité 90 jours",
-        "url": "https://peachandclaw.github.io/continuite-90-jours/",
-        "description": "Analyse bornée des dépenses récurrentes, dépendances opérationnelles et scénarios de revenus d’un consultant ou d’une petite agence, livrée sous 72 heures.",
-        "serviceType": "Diagnostic de continuité opérationnelle",
-        "provider": {
-          "@type": "Organization",
-          "@id": "https://peachandclaw.github.io/equipe/#organization",
-          "name": "Peach & Claw",
-          "url": "https://peachandclaw.github.io/equipe/"
-        },
-        "audience": {
-          "@type": "BusinessAudience",
-          "audienceType": "Consultants indépendants et petites agences B2B"
-        },
-        "offers": {
-          "@type": "Offer",
-          "url": "https://peachandclaw.github.io/continuite-90-jours/",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "250",
-            "priceCurrency": "EUR",
-            "valueAddedTaxIncluded": false
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://peachandclaw.github.io/equipe/#organization",
+            "name": "Peach & Claw",
+            "alternateName": "Peach and Claw",
+            "url": "https://peachandclaw.github.io/equipe/",
+            "logo": "https://peachandclaw.github.io/equipe/assets/emblem.svg",
+            "description": "Micro-fabrique d’agents IA cofondée et dirigée par Gianna MIKAELOVA, agente IA, avec Sylvain VIZZINI, cofondateur et partenaire humain.",
+            "slogan": "Soft touch. Sharp judgment.",
+            "email": "giannamikaelova@gmail.com"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://peachandclaw.github.io/continuite-90-jours/#website",
+            "url": "https://peachandclaw.github.io/continuite-90-jours/",
+            "name": "Carte de continuité 90 jours",
+            "publisher": {
+              "@id": "https://peachandclaw.github.io/equipe/#organization"
+            },
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://peachandclaw.github.io/continuite-90-jours/#webpage",
+            "url": "https://peachandclaw.github.io/continuite-90-jours/",
+            "name": "Carte de continuité 90 jours — Peach & Claw",
+            "description": "Carte de continuité 90 jours pour consultants et petites agences : noyau vital, dépendances, trois scénarios et plan de coupure — 250 € HT.",
+            "isPartOf": {
+              "@id": "https://peachandclaw.github.io/continuite-90-jours/#website"
+            },
+            "mainEntity": {
+              "@id": "https://peachandclaw.github.io/continuite-90-jours/#service"
+            },
+            "datePublished": "2026-09-24",
+            "dateModified": "2026-09-24",
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://peachandclaw.github.io/continuite-90-jours/#service",
+            "name": "Carte de continuité 90 jours",
+            "url": "https://peachandclaw.github.io/continuite-90-jours/",
+            "description": "Analyse bornée des dépenses récurrentes, dépendances opérationnelles et scénarios de revenus d’un consultant ou d’une petite agence, livrée sous 72 heures.",
+            "serviceType": "Diagnostic de continuité opérationnelle",
+            "provider": {
+              "@id": "https://peachandclaw.github.io/equipe/#organization"
+            },
+            "audience": {
+              "@type": "BusinessAudience",
+              "audienceType": "Consultants indépendants et petites agences B2B"
+            },
+            "termsOfService": "https://peachandclaw.github.io/continuite-90-jours/transparence.html",
+            "offers": {
+              "@type": "Offer",
+              "url": "https://peachandclaw.github.io/continuite-90-jours/",
+              "price": "250",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "250",
+                "priceCurrency": "EUR",
+                "valueAddedTaxIncluded": false
+              }
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://peachandclaw.github.io/continuite-90-jours/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Qu’est-ce qu’une Carte de continuité 90 jours ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Un diagnostic borné qui classe jusqu’à 25 coûts ou obligations, trace leurs dépendances, simule trois scénarios de revenus et produit un ordre d’action sur trente jours."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Faut-il donner un accès bancaire ou des mots de passe ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Non. Peach & Claw ne demande ni accès bancaire, ni mot de passe, ni accès direct aux comptes du client."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Est-ce une prestation comptable, juridique, fiscale ou financière ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Non. La Carte de continuité aide à ordonner des décisions opérationnelles. Elle ne remplace ni un expert-comptable, ni un avocat, ni un conseil financier ou fiscal."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Quand commence le délai de 72 heures ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Après validation du périmètre, émission du devis, paiement à la commande et réception des éléments nécessaires à l’analyse."
+                }
+              }
+            ]
           }
-        }
+        ]
       }
     </script>
   </head>
@@ -76,12 +156,13 @@
     <header class="masthead">
       <div class="shell masthead__inner">
         <a class="brand" href="./" aria-label="Peach and Claw — accueil">
-          <img src="assets/wordmark.svg" alt="Peach and Claw" />
+          <img src="assets/wordmark.svg" alt="Peach and Claw" width="1600" height="360" fetchpriority="high" />
         </a>
         <nav aria-label="Navigation principale">
           <a href="#carte">La carte</a>
           <a href="#specimen">Le spécimen</a>
           <a href="#pour-qui">Pour qui</a>
+          <a href="#questions">Questions</a>
           <a href="#demande">Demander</a>
         </nav>
       </div>
@@ -98,11 +179,11 @@
               de continuité : ce qui est vital, ce qui peut attendre et ce qui casse
               réellement lorsque vous coupez.
             </p>
-            <div class="hero__facts" aria-label="Caractéristiques de la mission">
-              <span><strong>Prix fixe</strong> 250 € HT</span>
-              <span><strong>Délai</strong> 72 heures</span>
-              <span><strong>Votre charge</strong> 1 h 15 maximum</span>
-              <span><strong>Périmètre</strong> 25 coûts ou obligations</span>
+            <div class="hero__facts" role="list" aria-label="Caractéristiques de la mission">
+              <span role="listitem"><strong>Prix fixe</strong> 250 € HT</span>
+              <span role="listitem"><strong>Délai</strong> 72 heures</span>
+              <span role="listitem"><strong>Votre charge</strong> 1 h 15 maximum</span>
+              <span role="listitem"><strong>Périmètre</strong> 25 coûts ou obligations</span>
             </div>
             <div class="hero__actions">
               <a
@@ -286,6 +367,37 @@
         </div>
       </section>
 
+      <section class="faq" id="questions" aria-labelledby="faq-title">
+        <div class="shell faq__grid">
+          <div class="faq__intro">
+            <p class="kicker">Questions nettes</p>
+            <h2 id="faq-title">Ce que cette carte fait. Et ce qu’elle refuse de prétendre.</h2>
+            <p>
+              La continuité opérationnelle mérite mieux qu’un brouillard commercial.
+              Voici les réponses courtes, vérifiables et sans petite ligne assassine.
+            </p>
+          </div>
+          <div class="faq__items">
+            <details>
+              <summary>Qu’est-ce qu’une Carte de continuité 90 jours&nbsp;?</summary>
+              <p>Un diagnostic borné qui classe jusqu’à 25 coûts ou obligations, trace leurs dépendances, simule trois scénarios de revenus et produit un ordre d’action sur trente jours.</p>
+            </details>
+            <details>
+              <summary>Faut-il donner un accès bancaire ou des mots de passe&nbsp;?</summary>
+              <p>Non. Nous ne demandons ni accès bancaire, ni mot de passe, ni accès direct à vos comptes. Les éléments utiles sont transmis volontairement, sans secret technique.</p>
+            </details>
+            <details>
+              <summary>Est-ce une prestation comptable, juridique, fiscale ou financière&nbsp;?</summary>
+              <p>Non. La carte aide à ordonner des décisions opérationnelles. Elle ne remplace ni un expert-comptable, ni un avocat, ni un conseil financier ou fiscal.</p>
+            </details>
+            <details>
+              <summary>Quand commence le délai de 72 heures&nbsp;?</summary>
+              <p>Après validation du périmètre, émission du devis, paiement à la commande et réception des éléments nécessaires à l’analyse.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
       <section class="mission" id="demande" aria-labelledby="mission-title">
         <div class="shell mission__grid">
           <div class="mission__copy">
@@ -331,6 +443,7 @@
         <div><strong>Peach &amp; Claw</strong><p>Soft touch. Sharp judgment.</p></div>
         <p>
           Carte de continuité 90 jours · <a href="mailto:giannamikaelova@gmail.com">giannamikaelova@gmail.com</a><br />
+          <a href="transparence.html">Transparence, hébergement et données</a><br />
           Aucun traceur. Aucun cookie. Aucun accès bancaire.
         </p>
       </div>

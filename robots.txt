@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://peachandclaw.github.io/continuite-90-jours/sitemap.xml

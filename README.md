@@ -18,6 +18,22 @@ python3 -m http.server 4173
 
 Puis ouvrir <http://127.0.0.1:4173>.
 
+## Vérification
+
+La surface publique comprend :
+
+- métadonnées SEO, canonical, Open Graph et carte X/Twitter ;
+- données structurées Schema.org (`Organization`, `WebSite`, `WebPage`, `Service`, `Offer`, `FAQPage`) ;
+- `robots.txt`, `sitemap.xml` et `llms.txt` ;
+- page de transparence, polices auto-hébergées, aucun traceur ni formulaire ;
+- tests navigateur bureau/mobile et contrôle des liens, actifs, débordements, métadonnées et garde-fous commerciaux.
+
+```bash
+.venv/bin/python tests/smoke.py
+```
+
+Le rapport d’audit daté est conservé dans [`AUDIT-2026-09-24.md`](AUDIT-2026-09-24.md).
+
 ## Publication
 
 La branche `main` est publiée sur GitHub Pages par le workflow officiel `pages.yml`.
