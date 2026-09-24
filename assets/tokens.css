@@ -1,0 +1,83 @@
+:root {
+  /* Matières de marque */
+  --pc-velours-950: #0c090a;
+  --pc-velours-900: #171013;
+  --pc-velours-800: #21171a;
+  --pc-papier-100: #fff7f2;
+  --pc-papier-200: #f6ddd2;
+  --pc-peche-300: #f6c2ae;
+  --pc-corail-500: #eb716a;
+  --pc-bordeaux-700: #7a2737;
+  --pc-or-400: #d8bc82;
+  --pc-encre-muted: #c8b6b8;
+
+  /* Couleurs fonctionnelles */
+  --pc-success: #76b58a;
+  --pc-warning: #e6bc74;
+  --pc-danger: #eb716a;
+  --pc-info: #8fa9c9;
+
+  /* Thème sombre canonique */
+  --pc-bg: var(--pc-velours-950);
+  --pc-surface: var(--pc-velours-900);
+  --pc-surface-raised: var(--pc-velours-800);
+  --pc-text: var(--pc-papier-100);
+  --pc-text-muted: var(--pc-encre-muted);
+  --pc-accent: var(--pc-peche-300);
+  --pc-accent-strong: var(--pc-corail-500);
+  --pc-border: rgb(246 194 174 / 22%);
+  --pc-focus: var(--pc-or-400);
+
+  /* Typographie */
+  --pc-font-display: "Fraunces", Georgia, serif;
+  --pc-font-body: "Sora", system-ui, sans-serif;
+  --pc-font-utility: "Archivo Narrow", "Arial Narrow", sans-serif;
+  --pc-step--1: clamp(.78rem, .76rem + .08vw, .84rem);
+  --pc-step-0: clamp(.95rem, .91rem + .18vw, 1.06rem);
+  --pc-step-1: clamp(1.18rem, 1.08rem + .45vw, 1.44rem);
+  --pc-step-2: clamp(1.48rem, 1.26rem + .9vw, 2rem);
+  --pc-step-3: clamp(2rem, 1.55rem + 1.9vw, 3.2rem);
+  --pc-step-4: clamp(3rem, 2rem + 4vw, 6rem);
+
+  /* Rythme 4 px */
+  --pc-space-1: .25rem;
+  --pc-space-2: .5rem;
+  --pc-space-3: .75rem;
+  --pc-space-4: 1rem;
+  --pc-space-6: 1.5rem;
+  --pc-space-8: 2rem;
+  --pc-space-12: 3rem;
+  --pc-space-16: 4rem;
+  --pc-space-24: 6rem;
+
+  /* Forme et profondeur */
+  --pc-radius-cut: 2px;
+  --pc-radius-soft: 12px;
+  --pc-radius-embrace: 28px;
+  --pc-line: 1px;
+  --pc-shadow-raised: 0 18px 50px rgb(0 0 0 / 26%);
+  --pc-max-content: 74rem;
+  --pc-grid-gap: clamp(1rem, 2vw, 1.75rem);
+
+  /* Mouvement */
+  --pc-ease-claw: cubic-bezier(.2,.8,.2,1);
+  --pc-duration-fast: 140ms;
+  --pc-duration-base: 240ms;
+}
+
+[data-theme="light"] {
+  --pc-bg: var(--pc-papier-200);
+  --pc-surface: var(--pc-papier-100);
+  --pc-surface-raised: #ffffff;
+  --pc-text: var(--pc-velours-950);
+  --pc-text-muted: #65565a;
+  --pc-accent: var(--pc-bordeaux-700);
+  --pc-accent-strong: #a8434e;
+  --pc-border: rgb(12 9 10 / 18%);
+  --pc-focus: var(--pc-bordeaux-700);
+  --pc-shadow-raised: 0 18px 50px rgb(69 37 45 / 14%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --pc-duration-fast: 0ms; --pc-duration-base: 0ms; }
+}

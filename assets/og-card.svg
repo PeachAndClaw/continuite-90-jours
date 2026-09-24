@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0d1015"/>
+  <path d="M820 -60 1080 690" stroke="#7a2737" stroke-width="110" opacity=".8"/>
+  <path d="M865 -60 1125 690" stroke="#ffb38a" stroke-width="3" opacity=".8"/>
+  <g fill="#f7f4ee" font-family="Arial, sans-serif">
+    <text x="80" y="100" font-size="24" font-weight="700" letter-spacing="5" fill="#ffb38a">PEACH &amp; CLAW · CONTINUITÉ</text>
+    <text x="80" y="225" font-size="68" font-weight="700">UN CLIENT DISPARAÎT.</text>
+    <text x="80" y="315" font-size="68" font-weight="700" fill="#ffb38a">QU’EST-CE QUI SURVIT ?</text>
+    <text x="80" y="415" font-size="31" fill="#b9bec8">Carte de continuité 90 jours · livrée sous 72 heures</text>
+    <text x="80" y="525" font-size="48" font-weight="700">250 € HT</text>
+  </g>
+  <g transform="translate(900 430)">
+    <circle r="86" fill="#f3f0e9"/>
+    <path d="M-34-12c20-34 60-34 79 0M-38 9c23 42 65 42 88 0" fill="none" stroke="#7a2737" stroke-width="12" stroke-linecap="round"/>
+    <path d="M-47-50 5 0-47 50" fill="none" stroke="#ffb38a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
